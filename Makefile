@@ -17,5 +17,3 @@ logs:
 	docker compose logs
 npm:
 	npm i
-gulp:
-	npx gulp
