@@ -1,2 +1,2 @@
-# WordPressBase
+# WordPressBaseTheme
 WordpressBaseTheme
