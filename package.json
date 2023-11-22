@@ -1,8 +1,7 @@
 {
-  "name": "iwaki-bee-yard",
+  "name": "wordpress-basetheme",
   "version": "1.0.0",
-  "description": "いわき養蜂場 サイトソース",
-  "main": "index.js",
+  "description": "",
   "scripts": {
     "dev": "npx webpack -w --mode development --devtool source-map",
     "pro": "npx webpack -w --mode production"
