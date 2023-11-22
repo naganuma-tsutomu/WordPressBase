@@ -36,6 +36,36 @@ make up
 
 # 使用方法
 
+## Wordpressのインストール
+
+1.「docker exec -it 【WordPressのコンテナ名】 /bin/bash」 でコンテナに入る
+
+```
+$ docker exec -it WordPressBaseTheme-wp /bin/bash
+```
+
+または
+
+```
+$ make wp
+```
+
+
+2.「chmod +x /tmp/wp-install.sh」 で実行権限を付与
+  シェルスクリプトに実行権限を付与して実行できるようにします
+  
+```
+$ chmod +x /tmp/wp-install.sh
+```
+
+3.「/tmp/wp-install.sh」 でWP-CLI実行
+
+```
+$ /tmp/wp-install.sh
+```
+
+## 開発サーバーの起動
+
 ```
 npm run dev
 ```
