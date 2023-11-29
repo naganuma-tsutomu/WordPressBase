@@ -33,6 +33,7 @@ services:
        WORDPRESS_DB_PASSWORD: wordpress
 
    phpmyadmin:
+      container_name: ${TITLE}-phpmyadmin
       image: phpmyadmin/phpmyadmin:latest
       environment:
         PMA_ARBITRARY: 1
