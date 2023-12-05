@@ -39,6 +39,7 @@ module.exports = {
     path: path.resolve(__dirname, "./dist/"), // 出力先フォルダを絶対パスで指定
     filename: `assets/js/[name].js`, // [name]にはentry:で指定したキーが入る
     clean: true,
+    assetModuleFilename: 'assets/images/[name][ext][query]'
   },
   module: {
     rules: [
@@ -59,9 +60,7 @@ module.exports = {
             options: {
               sourceMap: true,
               postcssOptions: {
-                plugins: [
-                 require('autoprefixer')({ grid: true })
-                ],
+                plugins: [require("autoprefixer")({ grid: true })],
               },
             },
           },
@@ -73,6 +72,15 @@ module.exports = {
           },
           // 下から順にコンパイル処理が実行されるので、記入順序に注意
         ],
+      },
+      {
+        test: /\.(gif|png|jpg|jpeg|webp)$/,
+        type: "asset",
+        parser: {
+          dataUrlCondition: {
+            maxSize: 50 * 1024,
+          },
+        },
       },
     ],
   },
