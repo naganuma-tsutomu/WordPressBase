@@ -21,8 +21,10 @@ const entries = WebpackWatchedGlobEntries.getEntries(
     path.resolve(__dirname, `${filePath.sass}*.scss`),
   ],
   {
-    ignore: path.resolve(__dirname, `${filePath.js}_*.js`),
-    ignore: path.resolve(__dirname, `${filePath.sass}_*.scss`),
+    ignore: [
+      path.resolve(__dirname, `${filePath.sass}_*.scss`),
+      path.resolve(__dirname, `${filePath.js}_*.js`),
+    ],
   }
 )();
 
